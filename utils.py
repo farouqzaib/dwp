@@ -21,7 +21,7 @@ def filter_people_50_miles_around_london(people):
         except:
             raise Exception('We encountered an error while calculating distance between coordinates.')
             
-        if distance <= 30:
+        if distance <= 50:
             people_around_london.append(person)
 
     return people_around_london
