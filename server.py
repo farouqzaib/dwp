@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 import requests
 
-from utils import filter_people_30_miles_around_london
+from utils import filter_people_50_miles_around_london
 from config import UPSTREAM_API
 
 @app.route('/')
@@ -22,7 +22,7 @@ def fetch_people():
             return make_response(jsonify({'status': 'error', 'message': 'Error parsing JSON object returned by upstream API.'}), 500)
 
         try:
-            people_around_london = filter_people_30_miles_around_london(response)
+            people_around_london = filter_people_50_miles_around_london(response)
         except Exception as e:
             return make_response(jsonify({'status': 'error', 'message': e.message}), 500)
         

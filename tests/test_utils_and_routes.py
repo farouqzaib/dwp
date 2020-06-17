@@ -3,11 +3,11 @@ import json
 import unittest
 from unittest import mock
 
-from utils import filter_people_30_miles_around_london
+from utils import filter_people_50_miles_around_london
 from config import UPSTREAM_API
 from server import app
 
-#FIXTURES contains 4 records with 2 of them within 30 miles of London
+#FIXTURES contains 4 records with 2 of them within 50 miles of London
 with open('./tests/fixtures.json') as json_file:
     FIXTURES = json.load(json_file)
 
@@ -43,12 +43,12 @@ class FetchPeopleTestCase(unittest.TestCase):
         app.config['TESTING'] = True
         self.app = app.test_client()        
 
-    def test_filter_people_30_miles_around_london_returns_2(self):
-        filter_results = filter_people_30_miles_around_london(FIXTURES)
+    def test_filter_people_50_miles_around_london_returns_2(self):
+        filter_results = filter_people_50_miles_around_london(FIXTURES)
         self.assertEqual(2, len(filter_results))
 
-    def test_filter_people_30_miles_around_london_returns_empty_list(self):
-        filter_results = filter_people_30_miles_around_london([])
+    def test_filter_people_50_miles_around_london_returns_empty_list(self):
+        filter_results = filter_people_50_miles_around_london([])
         self.assertEqual(0, len(filter_results))
 
     @mock.patch('requests.get', side_effect=mocked_requests_get_200)

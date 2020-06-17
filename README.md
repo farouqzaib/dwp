@@ -17,6 +17,11 @@ In a terminal, navigate to root folder and run the following.
 
 `export UPSTREAM_API='https://bpdts-test-app.herokuapp.com/users'`
 
+### RUNNING THE TESTS
+In a terminal, navigate to the root folder and run the following.
+
+    python3 -m tests.test_utils_and_routes
+
 ### STARTING THE SERVER
 In a terminal, navigate to the root folder and run the following commands.
 
