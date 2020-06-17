@@ -54,6 +54,8 @@ Server should be available at 127.0.0.1:5000
         "status": "error"    
     }
 
+OR
+
     {
         "message": "Error parsing JSON object returned by upstream API.",
         "status": "error"    
