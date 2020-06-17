@@ -13,7 +13,7 @@ In a terminal, navigate to root folder and run the following.
     pip install -r requirements.txt
 
 ### SET ENVIRONMENT VARIABLE
-In a terminal, navigate to root folder and run the following.
+In a terminal set the following environment variable or do so in the appropriate profile file.
 
 `export UPSTREAM_API='https://bpdts-test-app.herokuapp.com/users'`
 
@@ -74,4 +74,4 @@ OR
 2. Use Swagger to publish API documentation.
 3. Setup up production server using nginx reverse-proxy to a uswgi server.
 4. Is there a better name for the route?
-5. Cache distance between coordinates in Redis or similar..
+5. Cache distance between coordinates in Redis or similar.
