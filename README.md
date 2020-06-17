@@ -1,7 +1,7 @@
 ### FOLDER STRUCTURE
 - server.py - main code for route
 - utils.py - helper function
-- config.py - contains configuration used. Mostly declaration of upstream API url
+- config.py - contains configuration used. Mostly declaration of upstream API URL
 - requirements.txt - contains packages required to be installed
 - tests/test_utils_and_routes.py - tests for route and helper function
 - tests/fixtures.json - fixtures used during tests
@@ -74,4 +74,4 @@ OR
 2. Use Swagger to publish API documentation.
 3. Setup up production server using nginx reverse-proxy to a uswgi server.
 4. Is there a better name for the route?
-5. Cache distance between coordinates.
+5. Cache distance between coordinates in Redis or similar..
