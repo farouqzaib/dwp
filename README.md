@@ -72,3 +72,4 @@ Server should be available at 127.0.0.1:5000
 2. Use Swagger to publish API documentation.
 3. Setup up production server using nginx reverse-proxy to a uswgi server.
 4. Is there a better name for the route?
+5. Cache distance between coordinates.
