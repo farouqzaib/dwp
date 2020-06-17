@@ -21,7 +21,10 @@ def fetch_people():
         except:
             return make_response(jsonify({'status': 'error', 'message': 'Error parsing JSON object returned by upstream API.'}), 500)
 
-        people_around_london = filter_people_30_miles_around_london(response)
+        try:
+            people_around_london = filter_people_30_miles_around_london(response)
+        except Exception as e:
+            return make_response(jsonify({'status': 'error', 'message': e.message}), 500)
         
         return make_response(jsonify({'status': 'success', 'data': people_around_london}), 200)
     else:

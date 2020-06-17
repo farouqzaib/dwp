@@ -7,6 +7,7 @@ from utils import filter_people_30_miles_around_london
 from config import UPSTREAM_API
 from server import app
 
+#FIXTURES contains 4 records with 2 of them within 30 miles of London
 with open('./tests/fixtures.json') as json_file:
     FIXTURES = json.load(json_file)
 
@@ -42,12 +43,12 @@ class FetchPeopleTestCase(unittest.TestCase):
         app.config['TESTING'] = True
         self.app = app.test_client()        
 
-    def test_filter_people_30_miles_around_london(self):
+    def test_filter_people_30_miles_around_london_returns_2(self):
         filter_results = filter_people_30_miles_around_london(FIXTURES)
         self.assertEqual(2, len(filter_results))
 
     @mock.patch('requests.get', side_effect=mocked_requests_get_200)
-    def test_fetch_people_route_returns_200(self, mock_get):
+    def test_fetch_people_route_returns_http_200(self, mock_get):
         response = self.app.get('/')
         self.assertEqual(response.status_code, 200)
 
@@ -57,7 +58,7 @@ class FetchPeopleTestCase(unittest.TestCase):
         self.assertEqual(2, len(response.json['data']))
 
     @mock.patch('requests.get', side_effect=mocked_requests_get_500)
-    def test_fetch_people_route_returns_502(self, mock_get):
+    def test_fetch_people_route_returns_http_502(self, mock_get):
         #for this test, we expect our API to return a HTTP 502 if the upstream API returns a 500
         response = self.app.get('/')
         self.assertEqual(response.status_code, 502)
