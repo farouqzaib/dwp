@@ -1,10 +1,10 @@
 ### FOLDER STRUCTURE
-server.py - main code for route
-utils.py - helper function
-config.py - contains configuration used. Mostly declaration of upstream API url
-requirements.txt - contains packages required to be installed
-tests/test_utils_and_routes.py - tests for route and helper function
-tests/fixtures.json - fixtures used during tests
+- server.py - main code for route
+- utils.py - helper function
+- config.py - contains configuration used. Mostly declaration of upstream API url
+- requirements.txt - contains packages required to be installed
+- tests/test_utils_and_routes.py - tests for route and helper function
+- tests/fixtures.json - fixtures used during tests
 
 ### INSTALLATION
 This code has been tested on Python 3. 
