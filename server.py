@@ -5,12 +5,13 @@ app = Flask(__name__)
 import requests
 
 from utils import filter_people_30_miles_around_london
+from config import UPSTREAM_API
 
 @app.route('/')
 def fetch_people():
     people_around_london = []
     try:
-        r = requests.get('https://bpdts-test-app.herokuapp.com/users')
+        r = requests.get(UPSTREAM_API)
     except:
         return make_response(jsonify({'status': 'error', 'message': 'Upstream API could not be reached.'}), 500)
 
