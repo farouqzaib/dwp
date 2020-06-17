@@ -47,6 +47,10 @@ class FetchPeopleTestCase(unittest.TestCase):
         filter_results = filter_people_30_miles_around_london(FIXTURES)
         self.assertEqual(2, len(filter_results))
 
+    def test_filter_people_30_miles_around_london_returns_empty_list(self):
+        filter_results = filter_people_30_miles_around_london([])
+        self.assertEqual(0, len(filter_results))
+
     @mock.patch('requests.get', side_effect=mocked_requests_get_200)
     def test_fetch_people_route_returns_http_200(self, mock_get):
         response = self.app.get('/')
