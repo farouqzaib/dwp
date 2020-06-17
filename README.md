@@ -27,7 +27,7 @@ In a terminal, navigate to the root folder and run the following commands.
 `Ctrl+C` in the respective terminal it was started from.
 
 ### API
-GET /
+    GET /
 
 #### Sample responses:
 **HTTP 200**
