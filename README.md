@@ -23,6 +23,8 @@ In a terminal, navigate to the root folder and run the following commands.
 1. `export FLASK_APP=server.py`
 2. `flask run`
 
+Server should be available at 127.0.0.1:5000
+
 ### STOPPING THE SERVER
 `Ctrl+C` in the respective terminal it was started from.
 
