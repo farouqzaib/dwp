@@ -1,10 +1,10 @@
 import geopy.distance
 
-LONDON_COORDS = (51.509865, -0.118092)
+LONDON_COORDS = (51.509865, -0.118092)#London coordinate (Latitude, Longitude) gotten from Google
 
 def filter_people_30_miles_around_london(people):
     '''
-    Filters a list of people to return only those 30 miles around London
+    Parses a list of people and returns only those 30 miles around London
     Args:
         people (list): List of people
 
