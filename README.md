@@ -8,14 +8,19 @@
 
 ### INSTALLATION
 This code has been tested on Python 3. 
-Navigate to root folder and run the following.
+In a terminal, navigate to root folder and run the following.
 
     pip install -r requirements.txt
 
-### STARTING THE SERVER
-Navigate to the root folder and run the following commands
+### SET ENVIRONMENT VARIABLE
+In a terminal, navigate to root folder and run the following.
 
-1.  `export FLASK_APP=server.py`
+`export UPSTREAM_API='https://bpdts-test-app.herokuapp.com/users'`
+
+### STARTING THE SERVER
+In a terminal, navigate to the root folder and run the following commands.
+
+1. `export FLASK_APP=server.py`
 2. `flask run`
 
 ### STOPPING THE SERVER
